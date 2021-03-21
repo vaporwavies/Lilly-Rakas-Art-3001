@@ -8,12 +8,30 @@
     <link rel="stylesheet" href="ex5.css">
 </head>
 
-<script src="canvas.js">
+<script>
+    var imgObj;
+    var animate;
+    function init()
+    {imgObj=document.getElementById('shard');
+    imgObj.style.position= 'relative';
+    imgObj.style.left= '10px';
+    imgObj=document.getElementById('puff');
+    imgObj.style.position= 'relative';
+    imgObj.style.right= '10px';
+    }
+    function mouseinteract()
+    {
+
+    }
 </script>
 
 <body>
-    <img id= "snufsleep" src="snufsleep.png">
-    <canvas id="Canvas" width= "100%" height= "100%"></canvas>
+    <img id= "snufsleep" src="snufsleep.png" class="possnuffy">
+    <img id= "lamp" src= "lamp.png" class="poslamp">
+    <img id= "pillow" src="pillow.png" class="pospillow">
+    <img id= "vase" src= "vase.png" class="posvase"> 
+    <img id= "border" src="whitebar.png" class="posbar">
+        
 </body>
 
 </html>
