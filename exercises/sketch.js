@@ -86,6 +86,7 @@ function setup() {
 
   xS6 = random(30);
   yS6 = random(30);
+
 }
 function mouseClicked(){
   if (mouseX > 100 && mouseX < 170){
@@ -183,6 +184,59 @@ function mouseMoved(){
 
 }
 
+function reset(){
+  as = 0;
+  ap = 0;
+  ar = 0;
+  als = 0;
+
+  ass = 255;
+  al = 255;
+  av = 255;
+  api = 255;
+
+  aw = 0;
+  alb = 0;
+  avb = 0;
+  apb = 0;
+
+  pupilmoveX = 0;
+  pupilmoveY = 0;
+ 
+  s1x = 400;
+  s2x = 400;
+  s1y = 150;
+  s2y = 150;
+
+  p1x = 450;
+  p2x = 450;
+  p1y = 200;
+  p2y = 200;
+
+  shx = 200;
+  shy = 120;
+
+  rx = 340;
+  ry = 220;
+
+  xSpeed = random(30);
+  ySpeed = random(30);
+
+  xSpeed2 = random(30);
+  ySpeed2 = random(30);
+
+  xS3 = random(30);
+  yS3 = random(30);
+
+  xS4 = random(30);
+  yS4 = random(30);
+
+  xS5 = random(30);
+  yS5 = random(30);
+
+  xS6 = random(30);
+  yS6 = random(30);
+}
 
 function draw() {
  background(255, 255, 255);
@@ -238,4 +292,8 @@ function draw() {
  
  tint(255);
  image(rat, mouseX, mouseY);
+
+  button = createButton('reset');
+  button.position(65, 500);
+  button.mousePressed(reset);
 }
