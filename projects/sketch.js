@@ -147,47 +147,11 @@ function setup() {
 
 }
 
+
+
 function mouseMoved(){
 
-  p1x += xS3;
-  p1y += yS3;
-
-  p2x += xS4;
-  p2y += yS4;
-
-  shx += xS5;
-  shy += yS5;
-
-  rx += xS6;
-  ry += yS6;
   
-  if (p1x < 0 || p1x > width) {
-    xS3 *= -1;
-  }
-  if (p1y < 459  || p1y > height) {
-    yS3 *= -1;
-  }
-  if (p2x < 0 || p2x > width) {
-    xS4 *= -1;
-  }
-  if (p2y < 459  || p2y > height) {
-    yS4 *= -1;
-  }
-
-  if (shx < 0 || shx > width) {
-    xS5 *= -1;
-  }
-  if (shy < 459  || shy > height) {
-    yS5 *= -1;
-  }
-
-  if (rx < 0 || rx > width) {
-    xS6 *= -1;
-  }
-  if (ry < 459  || ry > height) {
-    yS6 *= -1;
-  }
-
 }
 
 function reset(){
@@ -366,6 +330,7 @@ function draw() {
  
  uxRect(500, 560, 120, 70).uxEvent('click',blankieClicked);
 
+
  tint(255, ac);
  image(computer, 950, 125, 180, 180);
  tint(255, aco);
@@ -394,6 +359,31 @@ tint(255, ablr);
   if (s2y < 459  || s2y > height) {
     ySpeed2 *= -1;
   }
+  if (p1x < 0 || p1x > width) {
+    xS3 *= -1;
+  }
+  if (p1y < 459  || p1y > height) {
+    yS3 *= -1;
+  }
+  if (p2x < 0 || p2x > width) {
+    xS4 *= -1;
+  }
+  if (p2y < 459  || p2y > height) {
+    yS4 *= -1;
+  }
+  if (shx < 0 || shx > width) {
+    xS5 *= -1;
+  }
+  if (shy < 459  || shy > height) {
+    yS5 *= -1;
+  }
+
+  if (rx < 0 || rx > width) {
+    xS6 *= -1;
+  }
+  if (ry < 459  || ry > height) {
+    yS6 *= -1;
+  }
 
   s1x += xSpeed;
   s1y += ySpeed;
@@ -401,6 +391,17 @@ tint(255, ablr);
   s2x += xSpeed2;
   s2y += ySpeed2;
 
+  p1x += xS3;
+  p1y += yS3;
+
+  p2x += xS4;
+  p2y += yS4;
+
+  shx += xS5;
+  shy += yS5;
+
+  rx += xS6;
+  ry += yS6;
 }
 
 function snuffyClicked(){
@@ -508,7 +509,4 @@ function blankieClicked(){
 function computerClicked(){
   ac= 0;
   aco = 255;
-}
-function dropBlanket(){
-
 }
